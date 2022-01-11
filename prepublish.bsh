@@ -1,0 +1,14 @@
+mkdir -p dist
+
+cp README.md dist/
+cp LICENSE dist/
+
+tsc --module commonjs --outdir dist/cjs
+
+tsc --module es6 --outdir dist/es
+
+rollup dist/es/smart-scaling-tool.js --file dist/umd/smart-scaling-tool.js --format umd --name smart-scaling-tool
+terser --ecma 6 --compress --mangle -o dist/umd/smart-scaling-tool.min.js -- dist/umd/smart-scaling-tool.js
+rm dist/umd/smart-scaling-tool.js
+
+rollup ./dist/es/smart-scaling-tool.d.ts --file dist/umd/smart-scaling-tool.min.d.ts --format umd --plugin ./node_modules/rollup-plugin-dts

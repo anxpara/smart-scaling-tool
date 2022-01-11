@@ -1,0 +1,35 @@
+{
+  "name": "smart-scaling-tool",
+  "version": "1.0.0",
+  "description": "Scale DOMRects while constraining them to other DOMRects, and more",
+  "main": "dist/cjs/smart-scaling-tool.js",
+  "module": "dist/es/smart-scaling-tool.js",
+  "umd:main": "dist/umd/smart-scaling-tool.min.js",
+  "umd:name": "smart-scaling-tool",
+  "unpkg": "dist/umd/smart-scaling-tool.min.js",
+  "types": "dist/cjs/smart-scaling-tool.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prepublish": "bash prepublish.bsh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anxpara/smart-scaling-tool.git"
+  },
+  "author": "anxpara",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anxpara/smart-scaling-tool/issues"
+  },
+  "homepage": "https://github.com/anxpara/smart-scaling-tool#readme",
+  "devDependencies": {
+    "rollup": "^2.63.0",
+    "rollup-plugin-dts": "^4.1.0",
+    "terser": "^5.10.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}
